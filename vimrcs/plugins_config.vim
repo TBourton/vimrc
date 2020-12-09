@@ -154,9 +154,9 @@ nnoremap <silent> <leader>z :Goyo<cr>
 " => Ale (syntax checker and linter)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
-\   'javascript': ['jshint'],
-\   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck']
+\   'yaml': ['yamllint'],
+\   'json': ['jsonlint'],
+\   'python': ['flake8', 'pyright', 'pycodestyle', 'pydocstyle', 'pyflakes']
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
@@ -166,7 +166,7 @@ let g:ale_set_highlights = 0
 
 " Only run linting when saving the file
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
+let g:ale_lint_on_enter = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
