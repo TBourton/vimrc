@@ -1,3 +1,6 @@
+au BufNewFile,BufRead *.conf set ft=json
+au BufNewFile,BufRead *.yml set ft=yaml
+
 """"""""""""""""""""""""""""""
 " => Python section
 """"""""""""""""""""""""""""""
