@@ -4,7 +4,11 @@
      version in an unordered list.  The format is:
         - **.PATCH**: Pull Request Title (PR Author) [PR Number](Link to PR)
 -->
+#### 6.10
+- **.0**: Enable full path specifications for NERDTreeIgnore (PhilRunninger) [#1207](https://github.com/preservim/nerdtree/pull/1207)
 #### 6.9
+- **.12**: Respect NERDTreeCustomOpenArgs when opening bookmark (przepompownia) [#1200](https://github.com/preservim/nerdtree/pull/1200)
+- **.11**: Revamp the README. (buncis, PhilRunninger) [#1192](https://github.com/preservim/nerdtree/pull/1192), [#1193](https://github.com/preservim/nerdtree/pull/1193)
 - **.10**: Open a mirrored NERDTree with correct width (PhilRunninger) [#1177](https://github.com/preservim/nerdtree/pull/1177)
 - **.9**: Updated Readme, removed typo (H3RSKO) [#1167](https://github.com/preservim/nerdtree/pull/1167)
 - **.8**: Refactor sort comparison functions, removing redundancy (PhilRunninger) [#1166](https://github.com/preservim/nerdtree/pull/1166)
