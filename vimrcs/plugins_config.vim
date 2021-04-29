@@ -157,7 +157,8 @@ nnoremap <silent> <leader>z :Goyo<cr>
 let g:ale_linters = {
 \   'yaml': ['yamllint'],
 \   'json': ['jsonlint'],
-\   'python': ['flake8', 'pyright', 'pycodestyle', 'pydocstyle', 'pyflakes']
+\   'python': ['flake8', 'pycodestyle', 'pydocstyle', 'pyflakes', 'pylint', 'pyright'],
+\   'r': ['lintr']
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
