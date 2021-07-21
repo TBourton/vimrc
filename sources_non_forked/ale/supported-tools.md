@@ -133,6 +133,7 @@ formatting.
   * [dafny](https://rise4fun.com/Dafny) :floppy_disk:
 * Dart
   * [analysis_server](https://github.com/dart-lang/sdk/tree/master/pkg/analysis_server)
+  * [dart-format](https://github.com/dart-lang/sdk/tree/master/utils/dartfmt)
   * [dartanalyzer](https://github.com/dart-lang/sdk/tree/master/pkg/analyzer_cli) :floppy_disk:
   * [dartfmt](https://github.com/dart-lang/sdk/tree/master/utils/dartfmt)
   * [language_server](https://github.com/natebosch/dart_language_server)
@@ -228,7 +229,6 @@ formatting.
 * HCL
   * [terraform-fmt](https://github.com/hashicorp/terraform)
 * HTML
-  * [HTMLHint](http://htmlhint.com/)
   * [alex](https://github.com/wooorm/alex) :floppy_disk:
   * [angular](https://www.npmjs.com/package/@angular/language-server)
   * [fecs](http://fecs.baidu.com/)
@@ -295,6 +295,7 @@ formatting.
 * LLVM
   * [llc](https://llvm.org/docs/CommandGuide/llc.html)
 * Lua
+  * [lua-format](https://github.com/Koihik/LuaFormatter)
   * [luac](https://www.lua.org/manual/5.1/luac.html)
   * [luacheck](https://github.com/mpeterv/luacheck)
   * [luafmt](https://github.com/trixnz/lua-fmt)
@@ -408,6 +409,7 @@ formatting.
   * [purescript-language-server](https://github.com/nwolverson/purescript-language-server)
   * [purty](https://gitlab.com/joneshf/purty)
 * Python
+  * [autoflake](https://github.com/myint/autoflake)
   * [autoimport](https://lyz-code.github.io/autoimport/)
   * [autopep8](https://github.com/hhatto/autopep8)
   * [bandit](https://github.com/PyCQA/bandit) :warning:
@@ -421,7 +423,7 @@ formatting.
   * [pyflakes](https://github.com/PyCQA/pyflakes)
   * [pylama](https://github.com/klen/pylama) :floppy_disk:
   * [pylint](https://www.pylint.org/) :floppy_disk:
-  * [pyls](https://github.com/palantir/python-language-server) :warning:
+  * [pylsp](https://github.com/python-lsp/python-lsp-server) :warning:
   * [pyre](https://github.com/facebook/pyre-check) :warning:
   * [pyright](https://github.com/microsoft/pyright)
   * [reorder-python-imports](https://github.com/asottile/reorder_python_imports)
@@ -435,6 +437,7 @@ formatting.
   * [lintr](https://github.com/jimhester/lintr)
   * [styler](https://github.com/r-lib/styler)
 * Racket
+  * [racket-langserver](https://github.com/jeapostrophe/racket-langserver/tree/master)
   * [raco](https://docs.racket-lang.org/raco/)
 * Re:VIEW
   * [redpen](http://redpen.cc/)
@@ -559,6 +562,7 @@ formatting.
   * [verilator](http://www.veripool.org/projects/verilator/wiki/Intro)
   * [vlog](https://www.mentor.com/products/fv/questa/)
   * [xvlog](https://www.xilinx.com/products/design-tools/vivado.html)
+  * [yosys](http://www.clifford.at/yosys/)
 * VHDL
   * [ghdl](https://github.com/ghdl/ghdl)
   * [vcom](https://www.mentor.com/products/fv/questa/)
