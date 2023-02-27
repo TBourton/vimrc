@@ -10,9 +10,9 @@
 [submodule "my_plugins/supertab"]
 	path = my_plugins/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "my_plugins/vim-python-docstring"]
-	path = my_plugins/vim-python-docstring
-	url = https://github.com/pixelneo/vim-python-docstring
 [submodule "my_plugins/vim-terraform"]
 	path = my_plugins/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "my_plugins/vim-python-docstring"]
+	path = my_plugins/vim-python-docstring
+	url = https://github.com/pixelneo/vim-python-docstring
