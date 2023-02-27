@@ -67,7 +67,6 @@ let g:user_zen_mode='a'
 """"""""""""""""""""""""""""""
 " => snipMate (beside <TAB> support <CTRL-j>)
 """"""""""""""""""""""""""""""
-let g:snipMate = { 'snippet_version' : 1 }
 ino <C-j> <C-r>=snipMate#TriggerSnippet()<cr>
 snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<cr>
 let g:snipMate = { 'snippet_version' : 1 }
@@ -154,9 +153,10 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \   'yaml': ['yamllint'],
-\   'json': ['jsonlint'],
-\   'python': ['flake8', 'pycodestyle', 'pydocstyle', 'pyflakes', 'pylint', 'pyright'],
-\   'r': ['lintr']
+\   'python': ['flake8', 'pydocstyle', 'pylint', 'pyright'],
+\   'javascript': ['prettier'],
+\   'go': ['gofmt', 'golint', 'govet', 'goimports', 'golines'],
+\   "terraform": ['terraform', 'tflint']
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
@@ -166,7 +166,7 @@ let g:ale_set_highlights = 0
 
 " Only run linting when saving the file
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 1
+let g:ale_lint_on_enter = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -180,3 +180,14 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 " => EditorConfig (project-specific EditorConfig rule)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Fugitive
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Copy the link to the line of a Git repository to the clipboard
+nnoremap <leader>v :.GBrowse!<CR>
+xnoremap <leader>v :GBrowse!<CR>
+
+
+let g:python_style = 'numpy'

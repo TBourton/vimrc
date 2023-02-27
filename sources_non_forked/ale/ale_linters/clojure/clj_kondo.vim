@@ -8,7 +8,8 @@ function! ale_linters#clojure#clj_kondo#GetCommand(buffer) abort
 
     let l:command = 'clj-kondo'
     \   . ale#Pad(l:options)
-    \   . ' --lint %t'
+    \   . ' --lint -'
+    \   . ' --filename %s'
 
     return l:command
 endfunction
@@ -16,7 +17,7 @@ endfunction
 function! ale_linters#clojure#clj_kondo#HandleCljKondoFormat(buffer, lines) abort
     " output format
     " <filename>:<line>:<column>: <issue type>: <message>
-    let l:pattern = '\v^[a-zA-Z]?:?[^:]+:(\d+):(\d+):? ((Exception|error|warning): ?(.+))$'
+    let l:pattern = '\v^[a-zA-Z]?:?[^:]+:(\d+)?:(\d+)?:? ((Exception|error|warning): ?(.+))$'
     let l:output = []
 
     for l:match in ale#util#GetMatches(a:lines, l:pattern)

@@ -24,12 +24,8 @@
 " POSSIBILITY OF SUCH DAMAGE.
 "
 
-if v:version < 700
-    finish
-endif
-
-" check whether this script is already loaded
-if exists("g:loaded_EditorConfig")
+" check for Vim versions and duplicate script loading.
+if v:version < 700 || exists("g:loaded_EditorConfig")
     finish
 endif
 let g:loaded_EditorConfig = 1
@@ -62,6 +58,14 @@ endif
 
 if !exists('g:EditorConfig_disable_rules')
     let g:EditorConfig_disable_rules = []
+endif
+
+if !exists('g:EditorConfig_softtabstop_space')
+    let g:EditorConfig_softtabstop_space = 1
+endif
+
+if !exists('g:EditorConfig_softtabstop_tab')
+    let g:EditorConfig_softtabstop_tab = 1
 endif
 
 " Copy some of the globals into script variables --- changes to these
@@ -372,7 +376,7 @@ endfunction " }}}2
 
 function! s:ApplyConfig(config) abort " Set the buffer options {{{1
     " Only process normal buffers (do not treat help files as '.txt' files)
-    if !empty(&buftype)
+    if index(['', 'acwrite'], &buftype) == -1
         return
     endif
 
@@ -398,12 +402,18 @@ function! s:ApplyConfig(config) abort " Set the buffer options {{{1
         " value
         if a:config["indent_size"] == "tab"
             let &l:shiftwidth = &l:tabstop
-            let &l:softtabstop = &l:shiftwidth
+            if type(g:EditorConfig_softtabstop_tab) != type([])
+                let &l:softtabstop = g:EditorConfig_softtabstop_tab > 0 ?
+                            \ &l:shiftwidth : g:EditorConfig_softtabstop_tab
+            endif
         else
             let l:indent_size = str2nr(a:config["indent_size"])
             if l:indent_size > 0
                 let &l:shiftwidth = l:indent_size
-                let &l:softtabstop = &l:shiftwidth
+                if type(g:EditorConfig_softtabstop_space) != type([])
+                    let &l:softtabstop = g:EditorConfig_softtabstop_space > 0 ?
+                            \ &l:shiftwidth : g:EditorConfig_softtabstop_space
+                endif
             endif
         endif
 
@@ -477,7 +487,7 @@ function! s:ApplyConfig(config) abort " Set the buffer options {{{1
         if exists('+colorcolumn')
             if l:max_line_length > 0
                 if g:EditorConfig_max_line_indicator == 'line'
-                    let &l:colorcolumn = l:max_line_length + 1
+                    setlocal colorcolumn+=+1
                 elseif g:EditorConfig_max_line_indicator == 'fill' &&
                             \ l:max_line_length < &l:columns
                     " Fill only if the columns of screen is large enough

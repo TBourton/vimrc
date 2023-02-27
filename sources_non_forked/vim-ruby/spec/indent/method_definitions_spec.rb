@@ -39,6 +39,11 @@ describe "Indenting" do
   end
 
   specify "endless methods" do
+    # Note: A case that doesn't work at this time:
+    #
+    #   def foo()
+    #     = 42
+    #
     assert_correct_indenting <<~EOF
       indented_block do
         def foo(bar) = puts(bar)
@@ -65,6 +70,10 @@ describe "Indenting" do
         def foo(
           bar
         ) = puts(bar)
+
+        # Reference: https://github.com/vim-ruby/vim-ruby/issues/450
+        def self.foo = puts(bar)
+        def bar.foo = puts(baz)
       end
     EOF
   end

@@ -1,6 +1,3 @@
-au BufNewFile,BufRead *.conf set ft=json
-au BufNewFile,BufRead *.yml set ft=yaml
-
 """"""""""""""""""""""""""""""
 " => Python section
 """"""""""""""""""""""""""""""
@@ -81,3 +78,9 @@ autocmd BufRead *.twig set syntax=html filetype=html
 " => Markdown
 """"""""""""""""""""""""""""""
 let vim_markdown_folding_disabled = 1
+
+
+""""""""""""""""""""""""""""""
+" => YAML
+""""""""""""""""""""""""""""""
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
