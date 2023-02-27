@@ -152,9 +152,11 @@ nnoremap <silent> <leader>z :Goyo<cr>
 " => Ale (syntax checker and linter)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck']
+\   'yaml': ['yamllint'],
+\   'python': ['flake8', 'pydocstyle', 'pylint', 'pyright'],
+\   'javascript': ['prettier'],
+\   'go': ['gofmt', 'golint', 'govet', 'goimports', 'golines'],
+\   "terraform": ['terraform', 'tflint']
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
@@ -186,3 +188,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " Copy the link to the line of a Git repository to the clipboard
 nnoremap <leader>v :.GBrowse!<CR>
 xnoremap <leader>v :GBrowse!<CR>
+# xnoremap <leader>v :'<'>GBrowse!<CR>
+
+
+let g:python_style = 'numpy'
