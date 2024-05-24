@@ -3,6 +3,7 @@
 """"""""""""""""""""""""""""""
 let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
+au BufEnter *.pyx setlocal filetype=python
 
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
 au BufNewFile,BufRead *.mako set ft=mako
@@ -78,9 +79,13 @@ autocmd BufRead *.twig set syntax=html filetype=html
 " => Markdown
 """"""""""""""""""""""""""""""
 let vim_markdown_folding_disabled = 1
+autocmd BufRead *.md set spell
+autocmd BufRead *.rst set spell
+
 
 
 """"""""""""""""""""""""""""""
 " => YAML
 """"""""""""""""""""""""""""""
+autocmd BufRead *.yml set filetype=yaml
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab

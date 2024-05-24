@@ -16,3 +16,6 @@
 [submodule "my_plugins/vim-python-docstring"]
 	path = my_plugins/vim-python-docstring
 	url = https://github.com/pixelneo/vim-python-docstring
+[submodule "my_plugins/copilot.vim"]
+	path = my_plugins/copilot.vim
+	url = https://github.com/github/copilot.vim.git

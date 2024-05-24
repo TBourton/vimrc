@@ -159,6 +159,13 @@ let g:ale_linters = {
 \   "terraform": ['terraform', 'tflint']
 \}
 
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['black', 'isort'],
+\   'go': ['gofmt'],
+\}
+
+
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 
 " Disabling highlighting
@@ -167,6 +174,8 @@ let g:ale_set_highlights = 0
 " Only run linting when saving the file
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+let g:ale_fix_on_save = 1
+let g:ale_completion_autoimport = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -191,3 +200,9 @@ xnoremap <leader>v :GBrowse!<CR>
 
 
 let g:python_style = 'numpy'
+
+" Remap copilot suggestion accept key to CTRL + J
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
+let g:terraform_fmt_on_save = 1
