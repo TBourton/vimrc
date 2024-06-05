@@ -1,21 +1,28 @@
 [submodule "my_plugins/black"]
 	path = my_plugins/black
 	url = https://github.com/ambv/black
+    ignore = untracked
 [submodule "my_plugins/jedi-vim"]
 	path = my_plugins/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim
+    url = https://github.com/davidhalter/jedi-vim
+    ignore = untracked
 [submodule "my_plugins/vim-isort"]
 	path = my_plugins/vim-isort
 	url = https://github.com/fisadev/vim-isort
+    ignore = untracked
 [submodule "my_plugins/supertab"]
 	path = my_plugins/supertab
 	url = https://github.com/ervandew/supertab.git
+    ignore = untracked
 [submodule "my_plugins/vim-terraform"]
 	path = my_plugins/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+    ignore = untracked
 [submodule "my_plugins/vim-python-docstring"]
 	path = my_plugins/vim-python-docstring
 	url = https://github.com/pixelneo/vim-python-docstring
+    ignore = untracked
 [submodule "my_plugins/copilot.vim"]
 	path = my_plugins/copilot.vim
 	url = https://github.com/github/copilot.vim.git
+    ignore = untracked
