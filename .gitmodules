@@ -3,7 +3,7 @@
 	url = https://github.com/ambv/black
 [submodule "my_plugins/jedi-vim"]
 	path = my_plugins/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim.git
+	url = https://github.com/davidhalter/jedi-vim
 [submodule "my_plugins/vim-isort"]
 	path = my_plugins/vim-isort
 	url = https://github.com/fisadev/vim-isort
