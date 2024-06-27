@@ -109,7 +109,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
-" Annotate strings with gettext 
+" Annotate strings with gettext
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
@@ -155,14 +155,23 @@ let g:ale_linters = {
 \   'yaml': ['yamllint'],
 \   'python': ['flake8', 'pydocstyle', 'pylint', 'pyright'],
 \   'javascript': ['prettier'],
-\   'go': ['gofmt', 'golint', 'govet', 'goimports', 'golines'],
-\   "terraform": ['terraform', 'tflint']
+\   'go': ['gofmt', 'golint', 'govet', 'goimports', 'golines','gobuild','bingo', 'gopls'],
+\   'terraform': ['terraform', 'tflint', 'terraform-ls'],
+\   'dockerfile': ['hadolint'],
+\   'markdown': ['markdownlint', 'cspell', 'pandoc'],
+\   'sh': ['bashate', 'cspell','shellcheck','shfmt'],
+\   'json': ['jq', 'jsonlint','fixjson'],
 \}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['black', 'isort'],
-\   'go': ['gofmt'],
+\   'python': ['ruff', 'autoimport', 'autoflake'],
+\   'go': ['gofmt', 'goimports', 'golines','gofumpt'],
+\   'terraform': ['terraform'],
+\   'sh': ['shfmt'],
+\   'yaml': ['prettier', 'yamlfix'],
+\   'markdown': ['remark-lint', 'textlint', 'prettier','pandoc'],
+\   'json': ['jq', 'prettier','fixjson','clang-format'],
 \}
 
 
