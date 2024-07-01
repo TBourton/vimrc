@@ -6,6 +6,12 @@
 
 
 """"""""""""""""""""""""""""""
+" => Enable native vim packages as described in the README
+""""""""""""""""""""""""""""""
+set packpath+=~/.vim_runtime
+
+
+""""""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
@@ -185,6 +191,7 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_fix_on_save = 1
 let g:ale_completion_autoimport = 1
+let g:ale_virtualtext_cursor = 'disabled'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

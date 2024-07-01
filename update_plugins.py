@@ -1,11 +1,3 @@
-try:
-    import concurrent.futures as futures
-except ImportError:
-    try:
-        import futures
-    except ImportError:
-        futures = None
-
 import re
 import shutil
 import tempfile
@@ -63,6 +55,7 @@ vim-indent-guides https://github.com/nathanaelkane/vim-indent-guides
 mru.vim https://github.com/vim-scripts/mru.vim
 editorconfig-vim https://github.com/editorconfig/editorconfig-vim
 dracula https://github.com/dracula/vim
+copilot.vim https://github.com/github/copilot.vim
 """.strip()
 
 GITHUB_ZIP = "%s/archive/master.zip"
@@ -105,10 +98,6 @@ if __name__ == "__main__":
     temp_directory = tempfile.mkdtemp()
 
     try:
-        if futures:
-            with futures.ThreadPoolExecutor(16) as executor:
-                executor.map(update, PLUGINS.splitlines())
-        else:
-            [update(x) for x in PLUGINS.splitlines()]
+        [update(x) for x in PLUGINS.splitlines()]
     finally:
         shutil.rmtree(temp_directory)
