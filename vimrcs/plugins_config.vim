@@ -155,23 +155,23 @@ let g:ale_linters = {
 \   'yaml': ['yamllint'],
 \   'python': ['flake8', 'pydocstyle', 'pylint', 'pyright'],
 \   'javascript': ['prettier'],
-\   'go': ['gofmt', 'golint', 'govet', 'goimports', 'golines','gobuild','bingo', 'gopls'],
+\   'go': ['gofmt', 'golint', 'govet', 'goimports', 'golines','gobuild', 'bingo', 'gopls'],
 \   'terraform': ['terraform', 'tflint', 'terraform-ls'],
 \   'dockerfile': ['hadolint'],
 \   'markdown': ['markdownlint', 'cspell', 'pandoc'],
-\   'sh': ['bashate', 'cspell','shellcheck','shfmt'],
-\   'json': ['jq', 'jsonlint','fixjson'],
+\   'sh': ['bashate', 'cspell', 'shellcheck', 'shfmt'],
+\   'json': ['jq', 'jsonlint', 'fixjson'],
 \}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['ruff', 'autoimport', 'autoflake'],
-\   'go': ['gofmt', 'goimports', 'golines','gofumpt'],
+\   'python': ['autoimport', 'autoflake'],
+\   'go': ['gofmt', 'goimports', 'golines', 'gofumpt'],
 \   'terraform': ['terraform'],
 \   'sh': ['shfmt'],
 \   'yaml': ['prettier', 'yamlfix'],
-\   'markdown': ['remark-lint', 'textlint', 'prettier','pandoc'],
-\   'json': ['jq', 'prettier','fixjson','clang-format'],
+\   'markdown': ['remark-lint', 'textlint', 'prettier', 'pandoc'],
+\   'json': ['jq', 'prettier', 'fixjson', 'clang-format'],
 \}
 
 
@@ -184,7 +184,7 @@ let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_fix_on_save = 1
-let g:ale_completion_autoimport = 0
+let g:ale_completion_autoimport = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
