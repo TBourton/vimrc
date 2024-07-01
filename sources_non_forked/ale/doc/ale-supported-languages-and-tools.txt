@@ -182,6 +182,7 @@ Notes:
   * `erblint`
   * `erubi`
   * `erubis`
+  * `htmlbeautifier`
   * `ruumba`
 * Erlang
   * `SyntaxErl`
@@ -202,6 +203,9 @@ Notes:
   * `fusion-lint`
 * Git Commit Messages
   * `gitlint`
+* Gleam
+  * `gleam_format`
+  * `gleamlsp`
 * GLSL
   * `glslang`
   * `glslls`
@@ -271,6 +275,8 @@ Notes:
   * `rustywind`
   * `tidy`
   * `write-good`
+* Hurl
+  * `hurlfmt`
 * Idris
   * `idris`
 * Ink
@@ -290,6 +296,7 @@ Notes:
   * `javalsp`
   * `uncrustify`
 * JavaScript
+  * `biome`
   * `clang-format`
   * `cspell`
   * `deno`
@@ -417,6 +424,8 @@ Notes:
   * `ocamlformat`
   * `ocamllsp`
   * `ocp-indent`
+  * `ols`
+* Odin
   * `ols`
 * OpenApi
   * `ibm_validator`
@@ -558,10 +567,12 @@ Notes:
   * `reek`
   * `rubocop`
   * `ruby`
+  * `rubyfmt`
   * `rufo`
   * `solargraph`
   * `sorbet`
   * `standardrb`
+  * `steep`
   * `syntax_tree`
 * Rust
   * `cargo`!!
@@ -650,6 +661,7 @@ Notes:
 * TOML
   * `dprint`
 * TypeScript
+  * `biome`
   * `cspell`
   * `deno`
   * `dprint`
@@ -669,6 +681,7 @@ Notes:
 * Verilog
   * `hdl-checker`
   * `iverilog`
+  * slang
   * `verilator`
   * `vlog`
   * `xvlog`

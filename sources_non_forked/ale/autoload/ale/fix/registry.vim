@@ -37,6 +37,11 @@ let s:default_registry = {
 \       'suggested_filetypes': ['bib'],
 \       'description': 'Format bib files using bibclean.',
 \   },
+\   'biome': {
+\       'function': 'ale#fixers#biome#Fix',
+\       'suggested_filetypes': ['javascript', 'typescript'],
+\       'description': 'Fix JavaScript and TypeScript using biome.',
+\   },
 \   'black': {
 \       'function': 'ale#fixers#black#Fix',
 \       'suggested_filetypes': ['python'],
@@ -97,6 +102,11 @@ let s:default_registry = {
 \       'function': 'ale#fixers#fecs#Fix',
 \       'suggested_filetypes': ['javascript', 'css', 'html'],
 \       'description': 'Apply fecs format to a file.',
+\   },
+\   'hurlfmt': {
+\       'function': 'ale#fixers#hurlfmt#Fix',
+\       'suggested_filetypes': ['hurl'],
+\       'description': 'Fix hurl files with hurlfmt.',
 \   },
 \   'tidy': {
 \       'function': 'ale#fixers#tidy#Fix',
@@ -290,6 +300,11 @@ let s:default_registry = {
 \       'function': 'ale#fixers#forge#Fix',
 \       'suggested_filetypes': ['solidity'],
 \       'description': 'Fix Solidity files with forge fmt.',
+\   },
+\   'gleam_format': {
+\       'function': 'ale#fixers#gleam_format#Fix',
+\       'suggested_filetypes': ['gleam'],
+\       'description': 'Fix Gleam files with gleam format.',
 \   },
 \   'gofmt': {
 \       'function': 'ale#fixers#gofmt#Fix',
@@ -546,6 +561,11 @@ let s:default_registry = {
 \       'suggested_filetypes': ['html', 'htmldjango'],
 \       'description': 'Fix HTML files with html-beautify from js-beautify.',
 \   },
+\   'htmlbeautifier': {
+\       'function': 'ale#fixers#htmlbeautifier#Fix',
+\       'suggested_filetypes': ['eruby'],
+\       'description': 'Fix ERB files with htmlbeautifier gem.',
+\   },
 \   'lua-format': {
 \       'function': 'ale#fixers#lua_format#Fix',
 \       'suggested_filetypes': ['lua'],
@@ -640,6 +660,11 @@ let s:default_registry = {
 \       'function': 'ale#fixers#nickel_format#Fix',
 \       'suggested_filetypes': ['nickel'],
 \       'description': 'Fix nickel files with nickel format',
+\   },
+\   'rubyfmt': {
+\       'function': 'ale#fixers#rubyfmt#Fix',
+\       'suggested_filetypes': ['ruby'],
+\       'description': 'A formatter for Ruby source code',
 \   },
 \}
 

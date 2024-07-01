@@ -159,7 +159,7 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \   'yaml': ['yamllint'],
-\   'python': ['flake8', 'pydocstyle', 'pylint', 'pyright'],
+\   'python': ['ruff', 'pydocstyle', 'pylint', 'pyright'],
 \   'javascript': ['prettier'],
 \   'go': ['gofmt', 'golint', 'govet', 'goimports', 'golines','gobuild', 'bingo', 'gopls'],
 \   'terraform': ['terraform', 'tflint', 'terraform-ls'],
@@ -171,7 +171,7 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['autoimport', 'autoflake'],
+\   'python': ['ruff', 'ruff_format', 'autoimport', 'autoflake'],
 \   'go': ['gofmt', 'goimports', 'golines', 'gofumpt'],
 \   'terraform': ['terraform'],
 \   'sh': ['shfmt'],
