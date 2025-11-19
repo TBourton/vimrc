@@ -26,3 +26,6 @@
 	path = my_plugins/copilot.vim
 	url = https://github.com/github/copilot.vim.git
     ignore = untracked
+[submodule "my_plugins/vim-go"]
+	path = my_plugins/vim-go
+	url = https://github.com/fatih/vim-go.git

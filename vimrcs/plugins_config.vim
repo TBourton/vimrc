@@ -159,9 +159,9 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \   'yaml': ['yamllint'],
-\   'python': ['ruff', 'pydocstyle', 'pylint', 'pyright'],
+\   'python': ['ruff', 'pyright'],
 \   'javascript': ['prettier'],
-\   'go': ['gofmt', 'golint', 'govet', 'goimports', 'golines','gobuild', 'bingo', 'gopls'],
+\   'go': ['gofmt', 'golint', 'govet', 'goimports', 'golines', 'gobuild', 'gopls', 'staticcheck', 'golangci-lint'],
 \   'terraform': ['terraform', 'tflint', 'terraform-ls'],
 \   'dockerfile': ['hadolint'],
 \   'markdown': ['markdownlint', 'cspell', 'pandoc'],
